@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Bugs</title>
+</head>
+<body>
+<div id="bark-box">
+  <button id="bark-btn">bark!</button>
+</div>
+<div id="meow-box">
+  <button id="meow-btn">meow!</button>
+</div>
+<div id="spider-box">
+  <button id="spider-btn">spider!</button>
+</div>
+</body>
+<style>
+div {
+  margin: 1rem;
+}
+button {
+  font-size: 24px;
+  width: 10rem;
+  padding: 1rem 0;
+  border-radius: 10px;
+  border: 2px solid black;
+  background: #ff4488;
+}
+
+#meow-btn {
+  background: #ff6600;
+}
+
+#spider-btn {
+  background: #22dd22;
+}
+
+p {
+  color: purple;
+  font-family: Helvetica;
+  font-size: 48px;
+}
+
+#meow-box p {
+  color: cyan;
+}
+
+#spider-box p {
+  color: yellow;
+}
+</style>
+<script>
+document.querySelector("#bark-btn").onclick = function() {
+  const barkP = document.createElement("p")
+  barkP.innerHTML = "woof woof";
+  document.querySelector("#bark-box").appendChild(barkP)
+}
+
+document.querySelector("#meow-btn").onclick = function() {
+  const meowP = document.createElement("p")
+  meowP.innerHTML = "meow meow";
+  document.querySelector("#meow-box").appendChild(meowP)
+}
+
+document.querySelector("#spider-btn").onclick = function() {
+  const spiderP = document.createElement("p")
+  spiderP.innerHTML = "hiii";
+  document.querySelector("#spider-box").appendChild(spiderP)
+}
+</script>
+</html>
